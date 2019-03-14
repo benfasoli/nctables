@@ -6,10 +6,6 @@ sudo: false
 
 warnings_are_errors: true
 
-branches:
-  except:
-    - gh-pages
-
 env:
  global:
    - CRAN=http://cran.rstudio.com
@@ -22,3 +18,6 @@ addons:
       - libhdf5-serial-dev libnetcdf-dev netcdf-bin
 
 install: true
+
+before_script:
+  - Rscript -e "install.packages('ncdf4')"
