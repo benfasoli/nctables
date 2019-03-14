@@ -1,6 +1,6 @@
 # nctables
 
-Minimal tools lightning fast data frame serialization in R built on NetCDF4 for language interoperability.
+Minimal tools for lightning fast data frame serialization in R built on NetCDF4 for language interoperability.
 
 ## Installation
 
