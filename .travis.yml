@@ -1,0 +1,24 @@
+language: r
+cache: packages
+
+dist: trusty
+sudo: false
+
+warnings_are_errors: true
+
+branches:
+  except:
+    - gh-pages
+
+env:
+ global:
+   - CRAN=http://cran.rstudio.com
+
+addons:
+  apt:
+    sources:
+      - r-packages-trusty
+    packages:
+      - libhdf5-serial-dev libnetcdf-dev netcdf-bin
+
+install: true
