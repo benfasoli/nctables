@@ -1,2 +1,3 @@
 ^nctables\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$

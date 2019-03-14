@@ -24,7 +24,8 @@ nct_deserialize <- function(nc, var) {
   attributes(vals) <- switch(type,
                              'POSIXct' = list(class = c('POSIXct', 'POSIXt'),
                                               tzone = 'UTC'),
-                             NULL)
+                             'Date' = list(class = 'Date', tzone = 'UTC'),
+                             list(class = type))
 
   vals
 }
