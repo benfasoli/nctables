@@ -1,0 +1,18 @@
+Package: nctables
+Title: Serialization utilities for R data.frames
+Version: 0.1
+Authors@R: 
+    person(given = "Ben",
+           family = "Fasoli",
+           role = c("aut", "cre"),
+           email = "benfasoli@gmail.com")
+Description:
+    Minimal tools lightning fast data frame serialization in R built on NetCDF4 
+    for language interoperability.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Imports: 
+    ncdf4
