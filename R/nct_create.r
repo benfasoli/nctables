@@ -38,11 +38,11 @@ nct_create <- function(df, filename, dims, longnames = NA, units = NA) {
     stop('Dimensions not in data.frame columns.')
   }
 
-  if (!all(names(longnames) %in% colnames(df))) {
+  if (!all(colnames(df) %in% names(longnames))) {
     stop('Must provide longnames for all columns in data.frame.')
   }
 
-  if (!all(names(units) %in% colnames(df))) {
+  if (!all(colnames(df) %in% names(units))) {
     stop('Must provide units for all columns in data.frame.')
   }
 

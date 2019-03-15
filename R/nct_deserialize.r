@@ -16,11 +16,14 @@ nct_deserialize <- function(nc, var) {
     stop('File was not created with nctables::nct_create.')
   }
 
-  type <- type_att$value
+  nct_type <- type_att$value
 
   vals <- ncdf4::ncvar_get(nc, var)
 
+  type_map <- getOption('nctables_type_map')
+  type <- names(type_map)[type_map == nct_type]
   class(vals) <- type
+
   attributes(vals) <- switch(type,
                              'POSIXct' = list(class = c('POSIXct', 'POSIXt'),
                                               tzone = 'UTC'),
