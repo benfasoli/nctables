@@ -46,6 +46,9 @@ nct_create <- function(df, filename, dims, longnames = NA, units = NA) {
     stop('Must provide units for all columns in data.frame.')
   }
 
+  longnames = trimws(longnames)
+  units = trimws(units)
+
   vars <- setdiff(cols, dims)
   metas <- lapply(df, nct_serialize)
 
